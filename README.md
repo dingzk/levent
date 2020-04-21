@@ -3,6 +3,10 @@ A event library just like libevent or libev but more lighter.
 
 # example:
 
+    // define callback
+    void *on_read(int sock, short which, void *args) {}
+
+    // main 
     include "levent/epoll.h"
     Epoll ep(1024);
     struct event_s ev[request_num];
