@@ -6,7 +6,6 @@ A Light events just like libevent or libev
     include "levent/epoll.h"
 
     Epoll ep(1024);
-    uint64_t request_id;
     struct event_s ev[request_num];
     int i = 0;
     while(i < request_num) {
