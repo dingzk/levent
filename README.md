@@ -1,5 +1,5 @@
-# levent
-A Light events just like libevent or libev
+# levent:
+A event library just like libevent or libev but more lighter.
 
 # example:
 
@@ -16,6 +16,7 @@ A Light events just like libevent or libev
     // dispatch
     ep.dispatch(max_timeout);
 
-# TODO
+# TODO:
 
-对事件模型进行了抽象，目前抽象到epoll。已经定义了虚基类，其他模型进行继承即可，接下来会进一步进行抽象和扩展。
+- 对事件模型进行了抽象，目前抽象到epoll。已经定义了虚基类，其他模型进行继承即可，接下来会进一步进行抽象和扩展。
+- 最终目标是打造一系列的网络编程生态。
