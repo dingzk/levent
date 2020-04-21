@@ -1,7 +1,7 @@
 # levent
 A Light events just like libevent or libev
 
-# useage:
+# example:
 
     include "levent/epoll.h"
 
@@ -18,3 +18,7 @@ A Light events just like libevent or libev
 
     // dispatch
     ep.dispatch(max_timeout);
+
+# TODO
+
+对事件模型进行了抽象，目前抽象到epoll。已经定义了虚基类，其他模型进行继承即可，接下来会进一步进行抽象和扩展。
