@@ -8,7 +8,6 @@
 #include "event.h"
 #include <iostream>
 
-
 class Epoll : public Event
 {
 private:
@@ -22,13 +21,12 @@ protected:
     static int reconvert_flags(short which);
 
 public:
-    Epoll(int m_max_events = -1);
+    Epoll(int m_max_events = 1024);
     ~Epoll();
     int add(struct event_s *ev);
     int mod(struct event_s *ev);
     int remove(struct event_s *ev);
     int dispatch(long timeout);
-
 
 };
 

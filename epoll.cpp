@@ -84,6 +84,9 @@ int Epoll::remove(struct event_s *ev) {
     if (epfd < 0) {
         return -1;
     }
+    if (ev->index == -1) {
+        return -1;
+    }
     if (epoll_ctl(epfd, EPOLL_CTL_DEL, ev->fd, nullptr) == -1) {
         return -1;
     }
